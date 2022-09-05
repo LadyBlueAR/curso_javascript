@@ -1,10 +1,40 @@
 /* Saludo */
 alert("¡Hola! Vamos a presupuestar una comisión para realizar Emotes para tus redes sociales.")
 
-/* Variables Constantes Globales*/
-const precioA = 10;
-const precioB = 20;
-const precioC = 30;
+class Emote {
+    constructor(nombre,tamanio,precio) {
+        this.nombre = nombre.toUpperCase();
+        this.tamanio = tamanio;
+        this.precio = parseFloat(precio);
+    }
+}
+
+const emoteA = new Emote("Emote Pequeño", "28 x 28", 10);
+const emoteB = new Emote("Emote Mediano", "56 x 56", 20);
+const emoteC = new Emote("Emote Grande", "112 x 112", 30);
+
+class Paquete {
+    
+    constructor(Emote, cantidad, precio) {
+        this.Emote = Emote;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+}
+
+const paquetes = [];
+paquetes.push (new Paquete(emoteA.nombre,5,40));
+paquetes.push (new Paquete(emoteB.nombre,5,90));
+paquetes.push (new Paquete(emoteC.nombre,5,140));
+
+function consultaPaquetes () {
+    for (paquete of paquetes) {
+        console.log("PAQUETE " + paquetes.indexOf(paquete) + "\n" + paquete.Emote + " X " + paquete.cantidad + "\n" + "VALOR: $" + paquete.precio)
+
+    }
+}
+
+/* Array de Productos (Emotes) */
 
 /* Funciones */
 function presupuesto () {
@@ -25,27 +55,19 @@ function presupuesto () {
     }
 
     calcularTotal(tamanio,cantidad);
-    calcularTiempo(cantidad);    
+    
 }
 
 function calcularTotal (tamanio,cantidad) {
     
     if (tamanio == "A") {
-        total = precioA * cantidad;
+        total = emoteA.precio * cantidad;
         alert("El total de su pedido es de: " + total + " pesos")
     } else if (tamanio == "B") {
-        total = precioB * cantidad;
+        total = emoteB.precio * cantidad;
         alert("El total de su pedido es de: " + total + " pesos")
     } else if (tamanio == "C") {
-        total = precioC * cantidad;
+        total = emoteC.precio * cantidad;
         alert("El total de su pedido es de: " + total + " pesos")
     } 
-}
-
-function calcularTiempo(cantidad) {    
-    let tiempoEntrega = 0
-    for (let i = 1 ; i <= cantidad ; i++) {
-        tiempoEntrega += 2;
-    }
-    alert("El tiempo de entrega del pedido será de: " + tiempoEntrega + " días");
 }
