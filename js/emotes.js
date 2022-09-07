@@ -1,6 +1,3 @@
-/* Saludo */
-alert("¡Hola! Vamos a presupuestar una comisión para realizar Emotes para tus redes sociales.")
-
 class Emote {
     constructor(nombre,tamanio,precio) {
         this.nombre = nombre.toUpperCase();
@@ -22,6 +19,7 @@ class Paquete {
     }
 }
 
+/* Array de paquetes */
 const paquetes = [];
 paquetes.push (new Paquete(emoteA.nombre,5,40));
 paquetes.push (new Paquete(emoteB.nombre,5,90));
@@ -34,7 +32,7 @@ function consultaPaquetes () {
     }
 }
 
-/* Array de Productos (Emotes) */
+
 
 /* Funciones */
 function presupuesto () {

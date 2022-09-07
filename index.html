@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Curso Javascript</title>
-    <script defer src="./js/archivo.js"></script>
+    <script defer src="./js/emotes.js"></script>
+    <script defer src="./js/ilustraciones.js"></script>
 </head>
 <style>
     body {
@@ -25,30 +26,53 @@
         justify-content: center;
         text-align: center;
     }
+    .sec {
+        border: 1px solid black;
+    }
 </style>
 <body>
-    <h1 style="text-align: center;">Cotiza tus Emotes</h1>
-    <p>El monto total del presupuesto se calcula por el precio y la cantidad de los emotes requeridos</p>
-    <p>El tiempo de entrega es a razón de dos días por emote.</p>    
-    <section class="boxes">
-        <div class="box">
-            <h2>A</h2>
-            <p class="tamanio">28 x 28</p>
-            <p>$10</p>
-        </div>
-        <div class="box">
-            <h2>B</h2>
-            <p class="tamanio">56 x 56</p>
-            <p>$20</p>
-        </div>
-        <div class="box">
-            <h2>C</h2>
-            <p class="tamanio">112 x 112</p>
-            <p>$30</p>
-        </div>        
+    <h1>LADY BLUE</h1>
+    <h2>ILUSTRACIONES DIGITALES</h2>
+
+    <section>
+        <article class="sec">
+            <h3 style="text-align: center;">Cotiza tus Emotes</h3>
+            <p>El monto total del presupuesto se calcula por el precio y la cantidad de los emotes requeridos.</p>
+            <p>El tiempo de entrega es a razón de dos días por emote.</p>    
+            <div class="boxes">
+                <div class="box">
+                    <h2>A</h2>
+                    <p class="tamanio">28 x 28</p>
+                    <p>$10</p>
+                </div>
+                <div class="box">
+                    <h2>B</h2>
+                    <p class="tamanio">56 x 56</p>
+                    <p>$20</p>
+                </div>
+                <div class="box">
+                    <h2>C</h2>
+                    <p class="tamanio">112 x 112</p>
+                    <p>$30</p>
+                </div>        
+            </div>
+            <p>Abre la consola y ejecuta la función: <strong style="color:brown;">presupuesto()</strong></p>
+            <p>Tambié puedes consultar nuestros paquetes ejecutando la función: <strong style="color:brown;">consultaPaquetes()</strong></p>
+        </article>
+        <article class="sec">
+            <h3>Cotiza tus Ilustraciones</h3>
+            <p>Tenemos tres tipos de ilustraciones.</p>
+            <p>Lineart</p>
+            <p>Blanco y Negro</p>
+            <p>Color</p>
+            <p>Cada una de ellas puede ser realizada en tres tipos de tamaño diferentes.</p>
+            <p>Para ver todas las ilustraciones disponibles y sus tamaños abre la consola y ejecuta <strong style="color:brown"> listarIlustraciones()</strong></p>
+            <p>También puedes buscar alguna en particular utilizando <strong style="color: brown">buscarIlustracion() </strong></p>
+            <p>El tiempo de entrega dependerá del tipo de ilustración y tamaño elegidos.</p>
+        </article>
     </section>
-    <p>Abre la consola y ejecuta la función: <strong style="color:brown;">presupuesto()</strong></p>
-    <p>Tambié puedes consultar nuestros paquetes ejecutando la función: <strong style="color:brown;">consultaPaquetes()</strong></p>
+   
+    
     
 </body>
 </html>
