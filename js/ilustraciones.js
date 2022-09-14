@@ -23,11 +23,16 @@ const ilu9 = new Ilustracion("ILUSTRACIÓN GRANDE - COLOR", "1200 x 1200",320, 5
 const ilustraciones = [];
 ilustraciones.push(ilu1,ilu2,ilu3,ilu4,ilu5,ilu6,ilu7,ilu8,ilu9);
 
-/* Listar todas las ilustraciones */
+/* Listar todas las ilustraciones por pantalla utilizando DOM*/
 
-function listarIlustraciones() {
+function listarIlustraciones () {
+    let lista = document.querySelector(".sec ul")
     for (const ilustracion of ilustraciones) {
-        console.log(ilustracion);
+        const listaIlustraciones = document.createElement("li")
+              listaIlustraciones.id="lineaIlustraciones"
+              listaIlustraciones.innerText = ilustracion.nombre + "\t" + "(" + ilustracion.tamanio + ")" + "\t" + "$" + ilustracion.precio
+              listaIlustraciones.className = "textoIlustraciones"
+              lista.appendChild(listaIlustraciones);              
     }
 }
 
